@@ -1,0 +1,2 @@
+C:\Users\andrew.theobald\AndroidstudioProjects\Noe\app\build\intermediates\classes\debug
+C:\Users\andrew.theobald\AndroidstudioProjects\Noe\app\build\intermediates\pre-dexed\debug\support-v4-18.0.0-639537ed1e97f09befdde8f629a0b57d5a291605.jar
