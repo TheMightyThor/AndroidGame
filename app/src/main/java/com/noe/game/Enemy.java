@@ -16,7 +16,6 @@ public class Enemy {
 
     private double movementSpeed;
 
-    // Behavioral Methods
     public void update() {
         follow();
         centerX += speedX;

@@ -22,11 +22,7 @@ public class Animation {
 			currentFrame = 0;
 		}
 	}
-//	public synchronized void jizzFace(Enemy en) {
-//		int enemyHealth = en.getHealth();
-//		Image image = 
-//		frames.add(new AnimFrame(image, totalDuration));
-//	}
+
 	public synchronized void addFrame(Image image, long duration) {
 		totalDuration += duration;
 		frames.add(new AnimFrame(image, totalDuration));

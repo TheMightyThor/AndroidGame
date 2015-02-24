@@ -8,7 +8,6 @@ import android.graphics.Rect;
 
 public class Canoe {
 
-	// Constants are Here
 	private int moveSpeed = 1;
 
 	private int centerX = 200;

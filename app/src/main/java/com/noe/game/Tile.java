@@ -50,8 +50,8 @@ public class Tile {
 			r.set(tileX, tileY, tileX+40, tileY+40);
 
 			if (Rect.intersects(r, Canoe.yellowRed) && type != 0) {
-				checkVerticalCollision(Canoe.yellowRed);//Canoe.rect, Canoe.rect2);
-				checkSideCollision(Canoe.yellowRed); //, Canoe.rect4, Canoe.footleft, Canoe.footright);
+				checkVerticalCollision(Canoe.yellowRed);
+				checkSideCollision(Canoe.yellowRed);
 			}
             if(Rect.intersects(r, cooler.getPowerUpRec())){
                 if (Rect.intersects(cooler.getPowerUpRec(), r) && type == 8) {
@@ -104,21 +104,7 @@ public class Tile {
 				//canoe.setCenterX(tileX + 102);
 				canoe.canMove = false;
 	
-			}/*else if (Rect.intersects(leftfoot, r)) {
-
-				canoe.setCenterX(tileX + 85);
-				canoe.canMove = false;
 			}
-
-			if (Rect.intersects(rright, r)) {
-				canoe.setCenterX(tileX - 62);
-				canoe.canMove = false;
-			}
-
-			else if (Rect.intersects(rightfoot, r)) {
-				canoe.setCenterX(tileX - 45);
-				canoe.canMove = false;
-			}*/
 		}
 		else {
 			canoe.canMove = true;
