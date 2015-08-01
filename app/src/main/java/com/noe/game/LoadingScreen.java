@@ -40,8 +40,7 @@ public class LoadingScreen extends Screen {
 		Assets.tilegrassRight = g.newImage("tilegrassright.png", ImageFormat.RGB565);
 		Assets.blueCooler = g.newImage("blueCooler.jpg", ImageFormat.RGB565);
 		Assets.beerCan = g.newImage("Guinness.jpg", ImageFormat.ARGB4444);
-		//This is how you would load a sound if you had one.
-		//Assets.click = game.getAudio().createSound("explode.ogg");
+
 
 		
 		game.setScreen(new MainMenuScreen(game));

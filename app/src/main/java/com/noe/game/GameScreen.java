@@ -23,7 +23,6 @@ public class GameScreen extends Screen {
 
 	GameState state = GameState.Running;
 
-	// Variable Setup
 	DecimalFormat df = new DecimalFormat("#.###");
 	private static Background bg1, bg2;
 	private static Canoe canoe;
@@ -54,7 +53,6 @@ public class GameScreen extends Screen {
 	public GameScreen(Game game) {
 		super(game);
 
-		// Initialize game objects here
 		DecimalFormat df = new DecimalFormat("#.##");
 		bg1 = new Background(0, 0);
 		bg2 = new Background(2160, 0);
@@ -106,26 +104,26 @@ public class GameScreen extends Screen {
 		cooler = Assets.blueCooler;
 		currentSprite = anim.getImage();
 
-		loadMap();
+        loadMap();
 
-		// Defining a paint object
-		paint = new Paint();
-		paint.setTextSize(30);
-		paint.setTextAlign(Paint.Align.CENTER);
-		paint.setAntiAlias(true);
-		paint.setColor(Color.WHITE);
-		
-		paint3 = new Paint();
-		paint3.setTextSize(15);
-		paint3.setTextAlign(Paint.Align.CENTER);
-		paint3.setAntiAlias(true);
-		paint3.setColor(Color.WHITE);
 
-		paint2 = new Paint();
-		paint2.setTextSize(100);
-		paint2.setTextAlign(Paint.Align.CENTER);
-		paint2.setAntiAlias(true);
-		paint2.setColor(Color.WHITE);
+        paint = new Paint();
+        paint.setTextSize(30);
+        paint.setTextAlign(Paint.Align.CENTER);
+        paint.setAntiAlias(true);
+        paint.setColor(Color.WHITE);
+
+        paint3 = new Paint();
+        paint3.setTextSize(15);
+        paint3.setTextAlign(Paint.Align.CENTER);
+        paint3.setAntiAlias(true);
+        paint3.setColor(Color.WHITE);
+
+        paint2 = new Paint();
+        paint2.setTextSize(100);
+        paint2.setTextAlign(Paint.Align.CENTER);
+        paint2.setAntiAlias(true);
+        paint2.setColor(Color.WHITE);
 
         paintDebug = new Paint();
         paintDebug.setTextSize(10);
@@ -143,7 +141,7 @@ public class GameScreen extends Screen {
 		while (scanner.hasNextLine()) {
 			String line = scanner.nextLine();
 
-			// no more lines to read
+
 			if (null == line) {
 				break;
 			}
@@ -174,11 +172,6 @@ public class GameScreen extends Screen {
 	public void update(float deltaTime) {
 		List<TouchEvent> touchEvents = game.getInput().getTouchEvents();
 
-		// We have four separate update methods in this example.
-		// Depending on the state of the game, we call different update methods.
-		// Refer to Unit 3's code. We did a similar thing without separating the
-		// update methods.
-
 		if (state == GameState.Ready)
 			updateReady(touchEvents);
 		if (state == GameState.Running)
@@ -191,12 +184,7 @@ public class GameScreen extends Screen {
 
 	private void updateReady(List<TouchEvent> touchEvents) {
 
-		// This example starts with a "Ready" screen.
-		// When the user touches the screen, the game begins.
-		// state now becomes GameState.Running.
-		// Now the updateRunning() method will be called!
-
-		if (touchEvents.size() > 0)
+    	if (touchEvents.size() > 0)
 			state = GameState.Running;
 	}
 
@@ -362,16 +350,11 @@ public class GameScreen extends Screen {
 		
 		g.drawImage(cooler,  blueCooler.getCenterX() - (cooler.getWidth() / 2), blueCooler.getCenterY() - (cooler.getHeight() / 2));
 
-		// Example:
-		// g.drawImage(Assets.background, 0, 0);
-		// g.drawImage(Assets.character, characterX, characterY);
 
-		// Secondly, draw the UI above the game elements.
 		if (state == GameState.Ready)
 			drawReadyUI();
 		if (state == GameState.Running)
-			drawRunningUI();
-		if (state == GameState.Paused)
+			drawRunningUI();		if (state == GameState.Paused)
 			drawPausedUI();
 		if (state == GameState.GameOver)
 			drawGameOverUI();
@@ -395,8 +378,7 @@ public class GameScreen extends Screen {
 
 	private void nullify() {
 
-		// Set all variables to null. You will be recreating them in the
-		// constructor.
+
 		paint = null;
 		bg1 = null;
 		bg2 = null;
